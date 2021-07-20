@@ -1,0 +1,31 @@
+<<% if logged_in? %>
+  <p>ログイン完了ユーザ: <%= current_user.name %></p>
+   <div class="row">
+    <aside class="col-sm-4">
+      <%= form_with(model: @topic) do |f| %>
+      
+      <div class="mb-3">
+        <%= f.label :image, '画像ファイルを選択' %>
+        <%= f.file_field :image, class: 'form-control' %>
+      </div>
+      
+        <div class="mb-3">
+         <%= f.label :description, 'Description' %>
+         <%= f.text_area :description, class: 'form-control', rows: 5 %>
+        </div>
+        <%= f.submit 'Post', class: 'btn btn-primary w-100' %>
+      <% end %>
+    </aside>
+     <div class="col-sm-8">
+      <%= render 'topics/topics', topics: @topics %>
+     </div>
+  </div>
+  
+<% else %>
+  <div class="bg-secondary p-3 p-sm-5 my-4 rounded">
+    <div class="text-center text-white">
+      <h1>test</h1>
+      <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,10 @@
+<p>現在の人気トピック</p>
+<%= render 'topics/ranking', topics: @ranking %>
+
+<div class="search-form">
+  <%= form_with url: timeline_path, method: :get, local: true do |f| %>
+    <%= f.text_field :keyword, value: params[:keyword] %>
+    <%= f.submit "検索" %>
+  <% end %>
+</div>
+<%= render 'topics/topics', topics: @topics %>
