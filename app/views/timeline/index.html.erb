@@ -1,6 +1,6 @@
-<p>現在の人気トピック</p>
+<h1 class="text-center">おすすめトピックス</h1>
 <%= render 'topics/ranking', topics: @ranking %>
-
+<h1 class="text-center">お気に入りの一枚をみ行けよう！</h1>
 <div class="search-form">
   <%= form_with url: timeline_path, method: :get, local: true do |f| %>
     <%= f.text_field :keyword, value: params[:keyword] %>

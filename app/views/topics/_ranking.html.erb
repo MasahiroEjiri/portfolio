@@ -1,19 +1,15 @@
 <% if topics.any? %>
-  <ul class="list-unstyled mt-2">
-    <div class="row">
+  <ul class="list-unstyled mt-2 row">
     <% topics.each do |topic| %>
-    <div class="col-md-4">
-      <li class="d-flex">
+      <li class="d-flex col-md-4 card">
         <div>
-          <div>
+          <div class="card-header">
             <%= link_to topic.user.name, user_path(topic.user), class: "text-decoration-none" %> <span class="text-muted">posted at <%= topic.created_at %></span>
           </div>
-          <div>
-            <p>
-            <%= image_tag topic.image.url, width: 250 if topic.image? %>
+          <div class="card-body">
+            <p class="text-center">
+            <%= image_tag topic.image.url,  width: 250  if topic.image? %>
             </p>
-          </div>
-          <div>
             <p><%= topic.description %></p>
           </div>
           <div>
@@ -23,11 +19,10 @@
             <%= render 'favorites/favorite_button', topic: topic %>
           </div>
         </div>
-        </div>
       </li>
     <% end %>
-    </div>
   </ul>
+  
 <% else %>
-  <p>該当する検索結果がありません</p>
+  <p>該当の結果がありません</p>
 <% end %>

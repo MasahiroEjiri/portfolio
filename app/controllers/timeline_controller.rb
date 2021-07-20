@@ -1,4 +1,5 @@
 class TimelineController < ApplicationController
+  before_action :require_user_logged_in
   def index
     if params[:keyword].blank?
       @ranking = Topic.find(Favorite.group(:topic_id).order('count(topic_id) DESC').limit(3).pluck(:topic_id))
