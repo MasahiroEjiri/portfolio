@@ -8,7 +8,7 @@
           </div>
           <div class="card-body">
             <p class="text-center">
-            <%= image_tag topic.image.url,  width: 250  if topic.image? %>
+            <%= image_tag topic.image.url, :alt => '画像', width: 250  if topic.image? %>
             </p>
             <p><%= topic.description %></p>
           </div>
