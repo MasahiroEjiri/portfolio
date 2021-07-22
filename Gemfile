@@ -21,6 +21,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
  gem 'bcrypt', '~> 3.1.7'
+ 
+ gem 'fog-aws'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -51,3 +53,7 @@ gem "carrierwave"
 group :production do
   gem 'pg', '>= 0.18', '< 2.0'
 end
+
+gem "aws-sdk-s3", require: false
+
+gem 'dotenv-rails', groups: [:development, :test]
