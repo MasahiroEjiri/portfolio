@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   
   
-  get 'timeline', to: 'timeline#index'
+  get 'timeline', to: 'timelines#index'
   get 'search', to: 'timeline#search'
  
  
