@@ -1,6 +1,6 @@
 class Topic < ApplicationRecord
   belongs_to :user
-  validates :image, presence: true, length: { maximum: 255 }
+  validates :image, presence: true
   validates :description, presence: true, length: { maximum: 255 }
   
   mount_uploader :image, ImageUploader

@@ -1,6 +1,6 @@
-<h1 class="text-center">おすすめトピックス</h1>
+<h1 class="text-center border border-info">Top Memories</h1>
 <%= render 'topics/ranking', topics: @ranking %>
-<h1 class="text-center">お気に入りの一枚をみ行けよう！</h1>
+<h1 class="text-center border border-primary">TimeLine</h1>
 <div class="search-form">
   <%= form_with url: timeline_path, method: :get, local: true do |f| %>
     <%= f.text_field :keyword, value: params[:keyword] %>
@@ -8,3 +8,5 @@
   <% end %>
 </div>
 <%= render 'topics/topics', topics: @topics %>
+
+

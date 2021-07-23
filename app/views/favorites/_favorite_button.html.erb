@@ -1,11 +1,11 @@
 <% if current_user.favoriting?(topic) %>
   <%= form_with(model: current_user.favorites.find_by(topic_id: topic.id), method: :delete) do |f| %>
     <%= hidden_field_tag :topic_id, topic.id, id: "topic_id_#{topic.id}" %>
-    <%= f.submit 'Unfavorite', class: 'btn btn-danger btn-sm' %>
+    <%= f.submit 'Unfavorite', class: 'btn btn-outline-danger btn-sm' %>
   <% end %>
 <% else %>
   <%= form_with(model: current_user.favorites.build) do |f| %>
     <%= hidden_field_tag :topic_id, topic.id, id: "mtopic_id_#{topic.id}" %>
-    <%= f.submit 'Favorite', class: 'btn btn-primary btn-sm' %>
+    <%= f.submit 'Favorite', class: 'btn btn-outline-primary btn-sm' %>
   <% end %>
 <% end %>
