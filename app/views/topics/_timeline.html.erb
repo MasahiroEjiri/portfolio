@@ -1,9 +1,9 @@
 <% if topics.any? %>
   <ul class="list-unstyled mt-2 row">
     <% topics.each do |topic| %>
-      <li class="d-flex col-md-3 card">
+      <li class="d-flex col-md-3 card px-0">
         <div>
-          <div class="card-header">
+          <div class="card-header m-1">
             <%= link_to topic.user.name, user_path(topic.user), class: "text-decoration-none" %> <span class="text-muted">posted at <%= topic.created_at %></span>
           </div>
           <div class="card-body">
@@ -12,7 +12,7 @@
             </p>
             <%= simple_format(h(topic.description)) %>
           </div>
-            <div class='btn-toolbar' role="toolbar">
+            <div class='btn-toolbar m-1' role="toolbar">
              <% if current_user == topic.user %>
               <%= link_to "Delete", topic, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-outline-danger btn-sm' %>
              <% end %>
