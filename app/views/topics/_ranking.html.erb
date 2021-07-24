@@ -10,13 +10,13 @@
             <p class="text-center">
             <%= image_tag topic.image.url, :alt => '画像', width: 250  if topic.image? %>
             </p>
-            <p><%= simple_format(h(topic.description)) %></p>
+            <%= simple_format(h(topic.description)) %>
           </div>
             <div class='btn-toolbar' role="toolbar">
              <% if current_user == topic.user %>
               <%= link_to "Delete", topic, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-outline-danger btn-sm' %>
              <% end %>
-              <%= render 'favorites/favorite_button', topic: topic %>
+              <%= render 'favorites/favorite_button2', topic: topic %>
           </div>
         </div>
       </li>
