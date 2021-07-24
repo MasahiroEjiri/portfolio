@@ -1,7 +1,29 @@
 #toppages {
   .bg-secondary {
-    background-image: url(/images/topcover.jpg);
+    background-image: url(/images/topcover2.jpg);
     background-size: cover;
     height: 500px;
   }
+  .jumbotron {
+  background: url(/images/topcover3.jpg);
+  background-size: cover;
+  
+  height: 300px;
+  background-position: center 60%;
+}
+  .container, .container-md, .container-sm {
+    max-width: 10000px;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    
+    padding-right: var(--bs-gutter-x,.0rem);
+    padding-left: var(--bs-gutter-x,.0rem);
+  
+    
+}
+
+
+.row{
+  margin-top: 10px;
+}
 }

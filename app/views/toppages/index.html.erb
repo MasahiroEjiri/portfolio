@@ -19,10 +19,41 @@
        </div>
   </div>
 <% else %>
-  <div class="bg-secondary p-3 p-sm-5 my-4 rounded">
-    <div class="text-center text-white">
-      <h1>思い出を共有しよう。</h1>
-      <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
+  <div class="jumbotron jumbotron-fluid">
+    <h1 class="display-4 text-white">Photo Memories</h1>
+    <p class="lead text-white">〜思い出を共有しよう〜</p>
+    <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-info' %>
+  </div>
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card">
+      <img src="images/topcard.jpg" class="card-img-top-center" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Photo Memories</h5>
+        <p class="card-text">本アプリは、「景色」「風景」「景観」などの写真を共有する専用アプリとなっております。</p>
+      </div>
     </div>
   </div>
+  <div class="col">
+    <div class="card">
+      <img src="images/topcover2.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">function</h5>
+        <p class="card-text">思い出の投稿。共感写真のお気に入り。人気ランキング。思い出の検索。お気に入りの閲覧。</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="images/topcover5.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">thought</h5>
+        <p class="card-text">旅行やスポット旅が好きで、その思い出を共有したく本アプリを作成。皆様の思い出の１枚をご共有ください。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <% end %>

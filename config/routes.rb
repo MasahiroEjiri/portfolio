@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   
   get 'timeline', to: 'timelines#index'
   get 'search', to: 'timeline#search'
+  get 'post', to: 'toppages#index'
  
  
   get 'signup', to: 'users#new'

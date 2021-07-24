@@ -1,7 +1,7 @@
 <% if topics.any? %>
   <ul class="list-unstyled mt-2 row">
     <% topics.each do |topic| %>
-      <li class="d-flex col-md-4 card">
+      <li class="d-flex col-md-3 card">
         <div>
           <div class="card-header">
             <%= link_to topic.user.name, user_path(topic.user), class: "text-decoration-none" %> <span class="text-muted">posted at <%= topic.created_at %></span>
